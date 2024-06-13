@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "my-app",
+    "slug": "my-app",
+    "scheme": "my-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/volleyball.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/volleyball_field.png",
+      "resizeMode": "contain",
+      "backgroundColor": "cyan"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/volleyball.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/volleyball.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos."
+        }
+      ]
+    ]
+  }
+}
